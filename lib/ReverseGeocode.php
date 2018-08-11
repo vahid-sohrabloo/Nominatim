@@ -138,6 +138,7 @@ class ReverseGeocode
             $sSQL .= ' AND rank_search = 4 AND rank_address = 4';
             $sSQL .= ' AND class in (\'boundary\',  \'place\')';
             $sSQL .= ' ORDER BY distance ASC';
+            $sSQL .= ' LIMIT 1';
 
             if (CONST_Debug) var_dump($sSQL);
             $aPlacNode = chksql(
